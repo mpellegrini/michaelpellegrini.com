@@ -7,7 +7,9 @@
 const tailwindcss = require("tailwindcss");
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Michael Pellegrini',
+  siteUrl: 'https://www.michaelpellegrini.com',
+  siteDescription: 'Hello! I\'m Michael Pellegrini. I usually go by Mike. I\'ve been a software architect/developer for many years. Welcome to my personal space on the internet where I share my thoughts, ideas and learnings about software development, home automation and whatever else is peaking my interests.',
   templates: {
     BlogPost: '/blog/:slug',
     Tag: '/blog/tag/:id'
