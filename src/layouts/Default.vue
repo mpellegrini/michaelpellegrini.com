@@ -1,50 +1,22 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+  <div class="antialiased text-gray-900 min-h-screen bg-gray-50">
+    <NavBar/>
+    <div class="mx-auto max-w-3xl mt-20 px-4 lg:px-0">
+      <slot/>
+    </div>
+    <Footer class="mt-36"/>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+import NavBar from "~/components/NavBar";
+import Footer from "~/components/Footer";
+
+export default {
+  name: "DefaultLayout",
+  components: {
+    NavBar,
+    Footer
   }
 }
-</static-query>
-
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+</script>
