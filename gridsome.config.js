@@ -8,7 +8,25 @@ const tailwindcss = require("tailwindcss");
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  templates: {
+    BlogPost: '/blog/:slug',
+    Tag: '/blog/tag/:id'
+  },
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BlogPost',
+        path: 'content/blog/**/*.md',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
+      }
+    },
+  ],
   css: {
     loaderOptions: {
       postcss: {
