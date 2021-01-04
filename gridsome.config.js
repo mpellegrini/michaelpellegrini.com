@@ -28,6 +28,12 @@ module.exports = {
         }
       }
     },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {}
+      }
+    },
   ],
   css: {
     loaderOptions: {
