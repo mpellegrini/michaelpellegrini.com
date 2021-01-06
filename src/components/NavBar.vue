@@ -1,6 +1,6 @@
 <template>
   <header class="border-t-4 border-green-500">
-    <div class="relative max-w-screen-2xl mx-auto flex items-center justify-between px-2 py-8 sm:p-8">
+    <div class="relative max-w-screen-xl mx-auto flex items-center justify-between px-2 py-8 sm:p-8">
       <div class="absolute sm:hidden">
         <button @click="toggle" class="align-middle p-2 rounded-md text-gray-400 hover:bg-gray-200 hover:text-green-600 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-green-500" :aria-expanded="menuOpen.toString()">
           <span class="sr-only">Open main menu</span>
