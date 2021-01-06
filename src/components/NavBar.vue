@@ -19,7 +19,7 @@
         </g-link>
       </div>
       <nav class="hidden sm:block flex flex-wrap sm:space-x-2">
-        <g-link v-for="page in pages" :key="page.name" :to="page.to" class="lowercase font-semibold hover:text-green-600 hover:bg-gray-200 px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-inset focus:ring-green-500">{{ page.name }}</g-link>
+        <g-link exact-active-class="navbar-active-link" v-for="page in pages" :key="page.name" :to="page.to" class="lowercase font-semibold hover:text-green-600 hover:bg-gray-200 px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-inset focus:ring-green-500">{{ page.name }}</g-link>
       </nav>
     </div>
     <div v-show="menuOpen">
@@ -30,7 +30,6 @@
       </nav>
     </div>
   </header>
-
 </template>
 
 <script>
@@ -62,4 +61,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.navbar-active-link {
+  @apply border-b-2 border-green-300 rounded-b-none;
+}
+</style>
 
