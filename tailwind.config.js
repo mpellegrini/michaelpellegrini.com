@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        'hoverable': {'raw': '(any-hover: hover)'}
+      }
     },
   },
   variants: {
