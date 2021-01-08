@@ -25,6 +25,11 @@ module.exports = {
             typeName: 'Tag',
             create: true
           }
+        },
+        remark: {
+          plugins: [
+            '@gridsome/remark-prismjs'
+          ]
         }
       }
     },
