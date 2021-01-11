@@ -9,7 +9,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       screens: {
-        'hoverable': {'raw': '(any-hover: hover)'}
+        'can-hover': {'raw': '(hover: hover)'}
       }
     },
   },
