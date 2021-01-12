@@ -43,7 +43,8 @@ module.exports = {
       use: 'gridsome-plugin-plausible-analytics',
       options: {
         dataDomain: 'michaelpellegrini.com',
-      }
+        customDomain: 'stats.michaelpellegrini.com',
+      },
     },
   ],
   css: {
